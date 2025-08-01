@@ -1,0 +1,322 @@
+/* CSSファイル - ページの見た目を定義するファイル */
+
+/* 全体のリセットとベース設定 */
+* {
+    margin: 0;          /* 外側の余白を0に */
+    padding: 0;         /* 内側の余白を0に */
+    box-sizing: border-box; /* ボックスサイズの計算方法を指定 */
+}
+
+/* ページ全体の設定 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* フォントファミリー */
+    line-height: 1.6;   /* 行の高さ */
+    color: #333;        /* 文字色（濃いグレー） */
+    background-color: #f5f5f5; /* 背景色（薄いグレー） */
+}
+
+/* ヘッダー部分のスタイル */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* グラデーション背景 */
+    color: white;       /* 文字色を白に */
+    padding: 1rem 2rem; /* 上下1rem、左右2remの余白 */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* 影を追加 */
+    display: flex;      /* フレックスボックスレイアウト */
+    justify-content: space-between; /* 要素を両端に配置 */
+    align-items: center; /* 縦方向の中央揃え */
+}
+
+/* ヘッダーのタイトル */
+.header h1 {
+    font-size: 2rem;    /* フォントサイズ */
+    font-weight: bold;  /* 太字 */
+}
+
+/* ナビゲーション部分 */
+.nav {
+    display: flex;      /* フレックスボックスレイアウト */
+    gap: 1rem;          /* 要素間の間隔 */
+}
+
+/* ナビゲーションボタン */
+.nav-btn {
+    background-color: rgba(255,255,255,0.2); /* 半透明の白背景 */
+    color: white;       /* 文字色を白に */
+    border: 2px solid rgba(255,255,255,0.3); /* 白い枠線 */
+    padding: 0.5rem 1rem; /* 内側の余白 */
+    border-radius: 25px; /* 角を丸く */
+    cursor: pointer;    /* マウスカーソルをポインターに */
+    transition: all 0.3s ease; /* アニメーション効果 */
+    font-weight: bold;  /* 太字 */
+}
+
+/* ナビゲーションボタンのホバー効果 */
+.nav-btn:hover {
+    background-color: rgba(255,255,255,0.3); /* ホバー時の背景色 */
+    transform: translateY(-2px); /* 少し上に移動 */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* 影を追加 */
+}
+
+/* メインコンテンツ部分 */
+.main {
+    max-width: 1200px;  /* 最大幅を制限 */
+    margin: 0 auto;     /* 中央揃え */
+    padding: 2rem;      /* 内側の余白 */
+}
+
+/* 認証セクション */
+.auth-section {
+    background: white;  /* 背景色を白に */
+    border-radius: 10px; /* 角を丸く */
+    padding: 2rem;      /* 内側の余白 */
+    margin-bottom: 2rem; /* 下の余白 */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* 影を追加 */
+}
+
+/* 認証フォーム */
+.auth-form {
+    max-width: 400px;   /* 最大幅を制限 */
+    margin: 0 auto;     /* 中央揃え */
+}
+
+/* フォームグループ（入力項目のグループ） */
+.form-group {
+    margin-bottom: 1.5rem; /* 下の余白 */
+}
+
+/* ラベル（入力項目の説明） */
+.form-group label {
+    display: block;     /* ブロック要素として表示 */
+    margin-bottom: 0.5rem; /* 下の余白 */
+    font-weight: bold;  /* 太字 */
+    color: #555;        /* 文字色 */
+}
+
+/* 入力フィールド */
+.form-group input,
+.form-group textarea {
+    width: 100%;        /* 幅を100%に */
+    padding: 0.75rem;   /* 内側の余白 */
+    border: 2px solid #ddd; /* 枠線 */
+    border-radius: 5px; /* 角を丸く */
+    font-size: 1rem;    /* フォントサイズ */
+    transition: border-color 0.3s ease; /* 枠線の色変更アニメーション */
+}
+
+/* 入力フィールドのフォーカス効果 */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;      /* デフォルトのフォーカス枠を削除 */
+    border-color: #667eea; /* フォーカス時の枠線色 */
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); /* フォーカス時の影 */
+}
+
+/* テキストエリア（商品説明用） */
+.form-group textarea {
+    resize: vertical;   /* 縦方向のみリサイズ可能 */
+    min-height: 100px;  /* 最小の高さ */
+}
+
+/* ボタンの基本スタイル */
+.btn {
+    padding: 0.75rem 1.5rem; /* 内側の余白 */
+    border: none;       /* 枠線を削除 */
+    border-radius: 5px; /* 角を丸く */
+    font-size: 1rem;    /* フォントサイズ */
+    font-weight: bold;  /* 太字 */
+    cursor: pointer;    /* マウスカーソルをポインターに */
+    transition: all 0.3s ease; /* アニメーション効果 */
+    text-transform: uppercase; /* 大文字に変換 */
+    letter-spacing: 1px; /* 文字間隔 */
+}
+
+/* プライマリボタン（青系） */
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* グラデーション背景 */
+    color: white;       /* 文字色を白に */
+}
+
+/* プライマリボタンのホバー効果 */
+.btn-primary:hover {
+    transform: translateY(-2px); /* 少し上に移動 */
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); /* 影を追加 */
+}
+
+/* サクセスボタン（緑系） */
+.btn-success {
+    background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%); /* グラデーション背景 */
+    color: white;       /* 文字色を白に */
+}
+
+/* サクセスボタンのホバー効果 */
+.btn-success:hover {
+    transform: translateY(-2px); /* 少し上に移動 */
+    box-shadow: 0 4px 15px rgba(86, 171, 47, 0.4); /* 影を追加 */
+}
+
+/* デンジャーボタン（赤系） */
+.btn-danger {
+    background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%); /* グラデーション背景 */
+    color: white;       /* 文字色を白に */
+}
+
+/* デンジャーボタンのホバー効果 */
+.btn-danger:hover {
+    transform: translateY(-2px); /* 少し上に移動 */
+    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4); /* 影を追加 */
+}
+
+/* 商品セクション */
+.item-section {
+    background: white;  /* 背景色を白に */
+    border-radius: 10px; /* 角を丸く */
+    padding: 2rem;      /* 内側の余白 */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* 影を追加 */
+}
+
+/* 商品フォーム */
+.item-form {
+    margin-bottom: 2rem; /* 下の余白 */
+    padding-bottom: 2rem; /* 下の内側余白 */
+    border-bottom: 2px solid #f0f0f0; /* 下の境界線 */
+}
+
+/* 商品一覧 */
+.item-list h2 {
+    margin-bottom: 1.5rem; /* 下の余白 */
+    color: #333;        /* 文字色 */
+}
+
+/* 商品コンテナ */
+#itemsContainer {
+    display: grid;      /* グリッドレイアウト */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* レスポンシブグリッド */
+    gap: 1.5rem;        /* グリッド間の間隔 */
+}
+
+/* 商品カード */
+.item-card {
+    background: white;  /* 背景色を白に */
+    border: 2px solid #f0f0f0; /* 枠線 */
+    border-radius: 10px; /* 角を丸く */
+    padding: 1.5rem;    /* 内側の余白 */
+    transition: all 0.3s ease; /* アニメーション効果 */
+    position: relative; /* 相対位置指定 */
+}
+
+/* 商品カードのホバー効果 */
+.item-card:hover {
+    transform: translateY(-5px); /* 上に移動 */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* 影を追加 */
+    border-color: #667eea; /* 枠線色を変更 */
+}
+
+/* 商品名 */
+.item-name {
+    font-size: 1.25rem; /* フォントサイズ */
+    font-weight: bold;  /* 太字 */
+    color: #333;        /* 文字色 */
+    margin-bottom: 0.5rem; /* 下の余白 */
+}
+
+/* 商品説明 */
+.item-description {
+    color: #666;        /* 文字色（グレー） */
+    margin-bottom: 1rem; /* 下の余白 */
+    line-height: 1.5;   /* 行の高さ */
+}
+
+/* 商品価格 */
+.item-price {
+    font-size: 1.5rem;  /* フォントサイズ */
+    font-weight: bold;  /* 太字 */
+    color: #667eea;     /* 文字色（青系） */
+    margin-bottom: 1rem; /* 下の余白 */
+}
+
+/* 商品カードのボタン群 */
+.item-actions {
+    display: flex;      /* フレックスボックスレイアウト */
+    gap: 0.5rem;        /* 要素間の間隔 */
+    justify-content: flex-end; /* 右揃え */
+}
+
+/* メッセージエリア */
+.message-area {
+    position: fixed;    /* 固定位置 */
+    top: 20px;          /* 上からの位置 */
+    right: 20px;        /* 右からの位置 */
+    z-index: 1000;      /* 最前面に表示 */
+    max-width: 300px;   /* 最大幅 */
+}
+
+/* メッセージ */
+.message {
+    padding: 1rem;      /* 内側の余白 */
+    margin-bottom: 0.5rem; /* 下の余白 */
+    border-radius: 5px; /* 角を丸く */
+    color: white;       /* 文字色を白に */
+    font-weight: bold;  /* 太字 */
+    animation: slideIn 0.3s ease; /* スライドインアニメーション */
+}
+
+/* 成功メッセージ */
+.message.success {
+    background-color: #28a745; /* 背景色（緑） */
+}
+
+/* エラーメッセージ */
+.message.error {
+    background-color: #dc3545; /* 背景色（赤） */
+}
+
+/* 情報メッセージ */
+.message.info {
+    background-color: #17a2b8; /* 背景色（青） */
+}
+
+/* スライドインアニメーション */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%); /* 右から開始 */
+        opacity: 0;     /* 透明から開始 */
+    }
+    to {
+        transform: translateX(0); /* 元の位置に */
+        opacity: 1;     /* 不透明に */
+    }
+}
+
+/* レスポンシブデザイン（モバイル対応） */
+@media (max-width: 768px) {
+    /* 768px以下の画面サイズでの設定 */
+
+    .header {
+        flex-direction: column; /* 縦並びに変更 */
+        gap: 1rem;      /* 要素間の間隔 */
+        text-align: center; /* 中央揃え */
+    }
+
+    .nav {
+        flex-wrap: wrap; /* 折り返し可能に */
+        justify-content: center; /* 中央揃え */
+    }
+
+    .main {
+        padding: 1rem;  /* 余白を縮小 */
+    }
+
+    #itemsContainer {
+        grid-template-columns: 1fr; /* 1列に変更 */
+    }
+
+    .item-actions {
+        flex-direction: column; /* 縦並びに変更 */
+    }
+
+    .message-area {
+        left: 20px;     /* 左からの位置に変更 */
+        right: 20px;    /* 右からの位置も設定 */
+        max-width: none; /* 最大幅を解除 */
+    }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- HTML5文書であることを宣言 -->
+<html lang="ja">
+<!-- 日本語のページであることを指定 -->
+
+<head>
+    <!-- ページの設定情報を記述するセクション -->
+    <meta charset="UTF-8">
+    <!-- 文字エンコーディングをUTF-8に設定（日本語文字を正しく表示するため） -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- モバイルデバイスでの表示を最適化するための設定 -->
+    <title>商品管理</title>
+    <!-- ブラウザのタブに表示されるタイトル -->
+
+    <!-- CSSファイルを読み込み -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 外部のCSSファイル（style.css）を読み込んでスタイルを適用 -->
+</head>
+
+<body>
+    <!-- ページの本文内容を記述するセクション -->
+
+    <!-- ヘッダー部分（ページの上部） -->
+    <header class="header">
+        <h1>フリーマーケット - 商品管理</h1>
+        <!-- ページのメインタイトル（絵文字付き） -->
+        <nav class="nav">
+            <!-- ナビゲーションメニュー -->
+            <button id="loginBtn" class="nav-btn">ログイン</button>
+            <!-- ログインボタン -->
+            <button id="signupBtn" class="nav-btn">新規登録</button>
+            <!-- 新規登録ボタン -->
+            <button id="logoutBtn" class="nav-btn" style="display: none;">ログアウト</button>
+            <!-- ログアウトボタン（初期状態では非表示） -->
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ部分 -->
+    <main class="main">
+        <!-- 認証フォームセクション（ログイン・新規登録用） -->
+        <section id="authSection" class="auth-section">
+            <!-- ログインフォーム -->
+            <div id="loginForm" class="auth-form" style="display: none;">
+                <h2>ログイン</h2>
+                <form id="loginFormElement">
+                    <div class="form-group">
+                        <label for="loginUsername">ユーザー名:</label>
+                        <input type="text" id="loginUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">パスワード:</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">ログイン</button>
+                </form>
+            </div>
+
+            <!-- 新規登録フォーム -->
+            <div id="signupForm" class="auth-form" style="display: none;">
+                <h2>新規登録</h2>
+                <form id="signupFormElement">
+                    <div class="form-group">
+                        <label for="signupUsername">ユーザー名:</label>
+                        <input type="text" id="signupUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">パスワード:</label>
+                        <input type="password" id="signupPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">登録</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- 商品管理セクション（ログイン後に表示） -->
+        <section id="itemSection" class="item-section" style="display: none;">
+            <!-- 商品追加フォーム -->
+            <div class="item-form">
+                <h2>新しい商品を追加</h2>
+                <form id="addItemForm">
+                    <div class="form-group">
+                        <label for="itemName">商品名:</label>
+                        <input type="text" id="itemName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemDescription">商品説明:</label>
+                        <textarea id="itemDescription" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemPrice">価格:</label>
+                        <input type="number" id="itemPrice" min="0" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">商品を追加</button>
+                </form>
+            </div>
+
+            <!-- 商品一覧表示エリア -->
+            <div class="item-list">
+                <h2>商品一覧</h2>
+                <div id="itemsContainer">
+                    <!-- 商品がここに動的に追加されます -->
+                </div>
+            </div>
+        </section>
+
+        <!-- メッセージ表示エリア -->
+        <div id="messageArea" class="message-area"></div>
+    </main>
+
+    <!-- JavaScriptファイルを読み込み（ページの最後に配置） -->
+    <script src="js/app.js"></script>
+    <!-- 外部のJavaScriptファイル（app.js）を読み込んで機能を追加 -->
+</body>
+</html>

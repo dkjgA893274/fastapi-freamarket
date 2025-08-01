@@ -1,0 +1,27 @@
+# FastAPI関連
+fastapi==0.115.12
+uvicorn[standard]==0.34.0
+
+# データベース関連
+sqlalchemy==2.0.41
+psycopg2-binary==2.9.10
+alembic==1.15.2
+
+# 認証・セキュリティ関連
+python-jose[cryptography]==3.5.0
+python-multipart==0.0.20
+
+# データ検証・シリアライゼーション
+pydantic==2.11.2
+
+# 環境変数管理
+python-dotenv==1.1.0
+
+# テスト関連
+pytest==8.4.1
+pytest-cov==6.0.0
+
+# 開発ツール（オプション）
+black==25.1.1
+isort==5.13.2
+flake8==7.1.1
